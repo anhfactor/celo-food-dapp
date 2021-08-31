@@ -15,11 +15,6 @@ Celo food dapp is a decentralize platform where user can order food, add food an
 3. Go to [https://celo.org/developers/faucet](https://celo.org/developers/faucet) and get tokens for the alfajores testnet.
 4. Switch to the alfajores testnet in the CeloExtensionWallet.
 
-### Test
-1. Create a product.
-2. Create a second account in your extension wallet and send them cUSD tokens.
-3. Buy product with secondary account.
-4. Check if balance of first account increased.
 
 
 ## Project Setup
@@ -31,7 +26,7 @@ npm install
 
 ### Start
 ```
-npm run dev
+npm run start
 ```
 
 ### Build
