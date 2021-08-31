@@ -1,40 +1,42 @@
-# Home Made Food Website w/ ReactJS
+# Celo Marketplace Dapp
+![](https://github.com/dacadeorg/celo-development-101/blob/main/content/gifs/celo_trailer_02.gif)
 
-## [Check it live here](https://muchirijane.github.io/Home-made-React/)
+## Description
+This is a very simple marketplace dapp where users can:
+* See products hosted on the Celo Blockchain
+* Purchase products with cUSD and pay the owner
+* Add your own products to the dapp
 
-![Home made website with React](https://media.giphy.com/media/40sLcNLiYFEJ2KOprl/giphy.gif)
+## Live Demo
+[Marketplace Dapp](https://dacadeorg.github.io/celo-marketplace-dapp/)
 
-## About the site
+## Usage
 
-After watching a React tutorial from Brian Design on youtube, I made this website to practice what I learned about React. It was fun designing the website from scratch in Figma and coding it out step by step with styled-components. I also added some pages to continue learning about React router and how it is used. Overall I learned a lot and googled alot too, haha.
+### Requirements
+1. Install the [CeloExtensionWallet](https://chrome.google.com/webstore/detail/celoextensionwallet/kkilomkmpmkbdnfelcpgckmpcaemjcdh?hl=en) from the Google Chrome Store.
+2. Create a wallet.
+3. Go to [https://celo.org/developers/faucet](https://celo.org/developers/faucet) and get tokens for the alfajores testnet.
+4. Switch to the alfajores testnet in the CeloExtensionWallet.
 
-- [Figma File with the wireframe and high fidelity prototype](https://www.figma.com/file/8EKRZudel3ccbNtnE9eDDd/Home-Made-Food-Website?node-id=0%3A1)
+### Test
+1. Create a product.
+2. Create a second account in your extension wallet and send them cUSD tokens.
+3. Buy product with secondary account.
+4. Check if balance of first account increased.
 
-## Getting Started
 
-### Installing
+## Project Setup
 
-Clone the Repository and run
-
-```js
-npm install/ npm i
-npm run start
+### Install
+```
+npm install
 ```
 
-## Deployment
+### Start
+```
+npm run dev
+```
 
-To deploy simply run
-
-```js
+### Build
+```
 npm run build
-```
-
-## Built With
-
-- [React JS](https://reactjs.org/)
-- [React Router](https://github.com/ReactTraining/react-router)
-- [Styled Components](https://www.styled-components.com)
-
-## Authors
-
-- **Jane Tracy** - [TracyCss on Dev.to](https://dev.to/tracycss)
