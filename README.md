@@ -1,14 +1,11 @@
-# Celo Marketplace Dapp
-![](https://github.com/dacadeorg/celo-development-101/blob/main/content/gifs/celo_trailer_02.gif)
+# Celo Order Food Dapp
+![](https://github.com/anhnt4288/celo-food-dapp/blob/master/demo.gif)
 
 ## Description
-This is a very simple marketplace dapp where users can:
-* See products hosted on the Celo Blockchain
-* Purchase products with cUSD and pay the owner
-* Add your own products to the dapp
+Celo food dapp is a decentralize platform where user can order food, add food and view history total order using celo blockchain. With this dapp user can order food without any middleman. The project built by react with custom style components.
 
-## Live Demo
-[Marketplace Dapp](https://dacadeorg.github.io/celo-marketplace-dapp/)
+## Live Demo in Netlify
+[Order Food Dapp](https://happy-thompson-b65097.netlify.app/)
 
 ## Usage
 
