@@ -27,10 +27,8 @@ function App() {
 
   const connectCeloWallet = async () => {
     if (window.celo) {
-      // notification("⚠️ Please approve this DApp to use it.")
       try {
         await window.celo.enable();
-        // notificationOff()
         const web3 = new Web3(window.celo);
         let kit = newKitFromWeb3(web3);
 
@@ -47,11 +45,9 @@ function App() {
       } catch (error) {
         console.log('There is an error')
         console.log({ error });
-        // notification(`⚠️ ${error}.`)
       }
     } else {
       console.log("please install the extension");
-      // notification("⚠️ Please install the CeloExtensionWallet.")
     }
   };
 

@@ -33,7 +33,6 @@ color: #FFFEFE;
 
 export const MainContentElementText = styled.div`
 width: 50%;
-padding-top: 5rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
