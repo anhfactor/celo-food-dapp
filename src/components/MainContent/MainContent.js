@@ -24,7 +24,7 @@ const MainContent = props =>{
                             <MainContentTitleText>For you all day</MainContentTitleText>
                         </MainContentTitle>
                         <MainContentText>
-                            Discover, Order food, Add foo
+                            Discover, Order food, Add food
                         </MainContentText>
                         <MainContentBtn>
                            <Button primary bigFont>Pick your meals</Button>

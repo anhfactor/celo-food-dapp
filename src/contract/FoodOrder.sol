@@ -17,8 +17,14 @@ interface IERC20Token {
 contract FoodOrder {
 
     uint internal foodsLength = 0;
+    
+    //  address of the cusd token
     address internal cUsdTokenAddress = 0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1;
+    
+    // admin address
+    address ownerAddress;
 
+// struct containing food data
     struct Food {
         address payable owner;
         string name;
@@ -27,12 +33,35 @@ contract FoodOrder {
         string location;
         string category;
         uint price;
-        uint sold;
+        uint sales;
         uint serving;
     }
 
+// map food struck to an integer
     mapping (uint => Food) internal foods;
+    
+    // event to e triggered when food is ordered
+    event FoodOrdered (
+        address _from,
+        uint foodId
+    );
+    
+    // admin modifier
+    modifier isAdmin(){
+        require(msg.sender == ownerAddress, "You are not an admin");
+        _;
+    }
+    
+    
+    // constructor
+    constructor(){
+        ownerAddress = msg.sender;
+    }
+    
+    
 
+
+// save a particular food to the blockchain
     function setFood(
         string memory _name,
         string memory _image,
@@ -40,10 +69,11 @@ contract FoodOrder {
         string memory _location,
         string memory _category,
         uint _price,
-        uint _sold,
         uint _serving
     ) public {
-        uint _sold = 0;
+     
+        require(_price > 0, "Please enter a valid price");
+        
         foods[foodsLength] = Food(
             payable(msg.sender),
             _name,
@@ -52,12 +82,13 @@ contract FoodOrder {
             _location,
             _category,
             _price,
-            _sold,
+            0,
             _serving
         );
         foodsLength++;
     }
 
+// get a particular food
     function getFood(uint _index) public view returns (
         address payable,
         string memory, 
@@ -78,10 +109,12 @@ contract FoodOrder {
             food.location, 
             food.category,
             food.price,
-            food.sold,
+            food.sales,
             food.serving
         );
     }
+    
+    // order a food
 
     function orderFood(uint _index) public payable  {
         require(
@@ -92,9 +125,11 @@ contract FoodOrder {
           ),
           "Transfer failed."
         );
-        foods[_index].sold++;
+        foods[_index].sales++;
+        emit FoodOrdered(msg.sender, _index);
     }
     
+    // get food lengtn
     function getFoodOrdersLength() public view returns (uint) {
         return (foodsLength);
     }
